@@ -2,13 +2,13 @@
 Work to extend Nordic Semiconductor nrf-sdk sample app named aws_iot.
 
 
-== Requirements On Build Host ==
+### Requirements On Build Host ###
 *  about 2.5GB disk space
 *  Zephyr RTOS toolchain and Nordic Semi nrf-sdk version 1.6.1
 *  one of development boards **thingy91_nrf9160** or **sparkfun_thing_plus_nrf9160**
 
 
-== Getting Started ==
+### Getting Started ###
 
 Developers ideally clone this project into a directory dedicated to it and free of other projects and files.  Because this application is Zephyr RTOS based a couple of steps following `git clone` are needed to make ready the cloned project for further development.  The following brief download and preparation steps assume that end developer has already installed and configured [west, Nordic sdk and Nordic Semi toolchain](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html).  With these tools and utilities in place, carry out the following steps to reach a "build ready" project point:
 
@@ -19,7 +19,7 @@ Developers ideally clone this project into a directory dedicated to it and free 
 +  west update
 
 
-== Building via west ==
+### Building via west ###
 
 To build this Zephyr based application for the development board thingy91_nrf9160 invoke `west` this way . . . note that the dollar sign is a bash or other Unix shell command prompt:
 
@@ -30,11 +30,11 @@ To switch to an alternate board or targeted hardware and rebuild, call `west` wi
 $ west build -b sparkfun_thing_plus_nrf9160 -p
 
 
-== Supported Boards ==
+### Supported Boards ###
 
 *  thingy91_nrf9160
 *  sparkfun_thing_plus_nrf9160
 
 
 
-== EOF ==
+### EOF ###
