@@ -33,13 +33,12 @@ manifest:
       revision: v2.6.0-rc1-ncs1
       path: sdk-zephyr
 
-    - name: zephyr
-      remote: zephyrproject
-      repo-path: zephyr
-      revision: v2.6.0
-      path: zephyr
+#    - name: zephyr
+#      remote: zephyrproject
+#      repo-path: zephyr
+#      revision: v2.6.0
+#      path: zephyr
 
   self:
     # This repository should be cloned to 
-#    path: zz-aws-iot-stand-alone
     path: aws-iot-stand-alone
