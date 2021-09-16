@@ -1,44 +1,13 @@
 manifest:
   remotes:
-    - name: nrfconnect-top-level-repo
+    - name: nrfconnect
       url-base: https://github.com/nrfconnect
-    - name: zephyrproject
-      url-base: https://github.com/zephyrproject-rtos
-
-## Example 'remote' stanza originally from Jared Wolff AQW demo:
-## Following remotes Ted locates on Nordic Semi document https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/introduction.html
   projects:
-    - name: sdk-nrf # note 'name' is appended to URL base, whether URL in remote or URL specd in projects sequence entry - TMH
-      remote: nrfconnect-top-level-repo
+    - name: nrf
       repo-path: sdk-nrf
+      remote: nrfconnect
       revision: v1.6.1
-      path: sdk-nrf # path to create in west workspace where this manifest file lives
-#      import: true
-
-    - name: sdk-nrfxlib
-      remote: nrfconnect-top-level-repo
-      repo-path: sdk-nrfxlib
-      revision: v1.6.1
-      path: sdk-nrfxlib
-
-    - name: sdk-mcuboot
-      remote: nrfconnect-top-level-repo
-      repo-path: sdk-mcuboot
-      revision: v1.7.2
-      path: sdk-mcuboot
-
-    - name: sdk-zephyr
-      remote: nrfconnect-top-level-repo
-      repo-path: sdk-zephyr
-      revision: v2.6.0-rc1-ncs1
-      path: sdk-zephyr
-
-#    - name: zephyr
-#      remote: zephyrproject
-#      repo-path: zephyr
-#      revision: v2.6.0
-#      path: zephyr
-
+      import: true 
   self:
     # This repository should be cloned to 
     path: aws-iot-stand-alone
