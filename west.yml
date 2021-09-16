@@ -1,19 +1,39 @@
 manifest:
   remotes:
-    - name: nrfconnect
+    - name: nrfconnect-top-level-repo
       url-base: https://github.com/nrfconnect
+
+## Example 'remote' stanza originally from Jared Wolff AQW demo:
+## Following remotes Ted locates on Nordic Semi document https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/introduction.html
   projects:
-    - name: nrf
+    - name: sdk-nrf # note 'name' is appended to URL base, whether URL in remote or URL specd in projects sequence entry - TMH
+      remote: nrfconnect-top-level-repo
       repo-path: sdk-nrf
-      remote: nrfconnect
       revision: v1.6.1
-      import: true
-#    # Drivers repository
-#    - name: zephyr-driver-work-v2
-#      path: kionix-drivers
-#      revision: main
-#      url: https://github.com/tedhavelka/zephyr-driver-work-v2
-##      import: true   ...2021-08-26 for some reason this should be commented out - TMH
+      path: sdk-nrf # path to create in west workspace where this manifest file lives
+#      import: true
+
+    - name: sdk-nrfxlib
+      remote: nrfconnect-top-level-repo
+      repo-path: sdk-nrfxlib
+      revision: v1.6.1
+      path: sdk-nrfxlib
+#      import: true
+
+    - name: sdk-mcuboot
+      remote: nrfconnect-top-level-repo
+      repo-path: sdk-mcuboot
+      revision: v1.7.2
+      path: sdk-mcuboot
+#      import: true
+
+    - name: sdk-zephyr
+      remote: nrfconnect-top-level-repo
+      repo-path: sdk-zephyr
+      revision: v2.6.0-rc1-ncs1
+      path: sdk-zephyr
+#      import: true
+
   self:
     # This repository should be cloned to 
     path: zz-aws-iot-stand-alone
