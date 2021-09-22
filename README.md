@@ -36,5 +36,7 @@ $ west build -b sparkfun_thing_plus_nrf9160 -p
 *  sparkfun_thing_plus_nrf9160
 
 
+2021-09-21 - trivial change to test 'dot ssh config' file with two github accounts - TMH
+
 
 ### EOF ###
